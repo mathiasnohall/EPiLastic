@@ -1,0 +1,56 @@
+﻿using EPiServer;
+using EPiServer.Core;
+using FakeItEasy;
+using NUnit.Framework;
+using EpiLastic.Indexing;
+using EpiLastic.Indexing.EventHandling;
+using EpiLastic.Indexing.Services;
+using EpiLastic.Models;
+using System;
+using System.Collections.Generic;
+using System.Globalization;
+
+namespace EpiLastic.Test.For_EPiServerEventHandler.PublishedContent
+{
+    [TestFixture]
+    public class when_ISearchablePage_when_exclude_from_search
+    {
+        private PageData _page;
+        private IEPiServerEventHandler _eventHandler;
+        private IIndexClient _indexClient;
+        private IPageHelper _pageHelper;
+        private IIndexingHandler _indexingHandler;
+        private ContentEventArgs _event;
+
+        public when_ISearchablePage_when_exclude_from_search()
+        {
+            _page = A.Fake<PageData>(x => x.Implements(typeof(ISearchablePage)));
+            var languages = new List<CultureInfo>();
+            languages.Add(new CultureInfo("sv"));
+            languages.Add(new CultureInfo("en"));
+            _page.ExistingLanguages = languages;
+            _indexClient = A.Fake<IIndexClient>();
+            _indexingHandler = A.Fake<IIndexingHandler>();
+            _pageHelper = A.Fake<IPageHelper>();
+
+            A.CallTo(() => _pageHelper.PageShouldBeIndexed(A<PageData>.Ignored)).Returns(false);
+            A.CallTo(() => _pageHelper.PageShouldBeDeleted(A<PageData>.Ignored)).Returns(true);
+
+            _event = A.Fake<ContentEventArgs>();
+            _event.Content = _page;
+
+            _eventHandler = new EPiServerEventHandler(_indexClient, _pageHelper, _indexingHandler);
+        }
+
+        [Test]
+        public void when_publish_ISearchablePage_with_exclude_from_searchresults_checkbox_it_should_delete()
+        {
+            _eventHandler.PublishedContent(_event);
+
+            A.CallTo(() => _indexClient.DeleteAsync(A<Guid>.Ignored, A<string>.Ignored)).MustHaveHappened();
+
+            A.CallTo(() => _indexClient.IndexAsyncUsingAlias(A<Page>.Ignored, A<string>.Ignored)).MustNotHaveHappened();
+            A.CallTo(() => _indexClient.IndexDuringReindex(A<Page>.Ignored, A<string>.Ignored)).MustNotHaveHappened();
+        }
+    }
+}
