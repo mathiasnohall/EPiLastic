@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EPiLastic.Querying")]
+[assembly: AssemblyTitle("EpiLastic.Querying")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EPiLastic.Querying")]
+[assembly: AssemblyProduct("EpiLastic.Querying")]
 [assembly: AssemblyCopyright("Copyright ©  2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("4f82b1e7-8645-4a61-ae13-1494420bd0c3")]
+[assembly: Guid("f5195833-892c-4d78-b75a-5928888f39ab")]
 
 // Version information for an assembly consists of the following four values:
 //
