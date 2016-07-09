@@ -8,6 +8,7 @@ using EpiLastic.Indexing.Services;
 using EpiLastic.Models;
 using System.Collections.Generic;
 using System.Linq;
+using EPiLastic.Indexing.Services;
 
 namespace EpiLastic.Test.For_IndexingHandler.IndexBlock
 {
@@ -23,6 +24,7 @@ namespace EpiLastic.Test.For_IndexingHandler.IndexBlock
         private IPageHelper _pageHelper;
         private IContentLoader _contentLoader;
         private IContentSoftLinkRepository _contentSoftLinkRepo;
+        private IObjectMapper _objectMapper;
 
         public when_index_block()
         {
@@ -30,15 +32,17 @@ namespace EpiLastic.Test.For_IndexingHandler.IndexBlock
             _contentSoftLinkRepo = A.Fake<IContentSoftLinkRepository>();
             _pageHelper = A.Fake<IPageHelper>();
 
+            _objectMapper = A.Fake<IObjectMapper>();
+
             _parentPage = A.Fake<PageData>(x => x.Implements(typeof(ISearchablePage)));
             _parentPage.ContentLink = new ContentReference(1);
             A.CallTo(() => _pageHelper.PageShouldBeIndexed(_parentPage)).Returns(true);
-            A.CallTo(() => ((ISearchablePage)_parentPage).Map()).Returns(A.Fake<Page>());
+            A.CallTo(() => _objectMapper.Map(((ISearchablePage)_parentPage))).Returns(A.Fake<Page>());
             A.CallTo(() => _contentLoader.Get<IContent>(_parentPage.ContentLink, A<LoaderOptions>.Ignored)).Returns(_parentPage);
 
             _childBlock = A.Fake<IContent>(x => x.Implements(typeof(ISearchableBlock)));
             _childBlock.ContentLink = new ContentReference(2);
-            A.CallTo(() => ((ISearchableBlock)_childBlock).Map()).Returns(A.Fake<Block>());
+            A.CallTo(() => _objectMapper.Map(((ISearchableBlock)_childBlock))).Returns(A.Fake<Block>());
             A.CallTo(() => _contentLoader.Get<IContent>(_childBlock.ContentLink, A<LoaderOptions>.Ignored)).Returns(_childBlock);
 
             _blockContainer = A.Fake<IContent>(x => x.Implements(typeof(ISearchableBlockContainer)));
@@ -47,7 +51,7 @@ namespace EpiLastic.Test.For_IndexingHandler.IndexBlock
 
             _grandchildBlock = A.Fake<IContent>(x => x.Implements(typeof(ISearchableBlock)));
             _grandchildBlock.ContentLink = new ContentReference(4);
-            A.CallTo(() => ((ISearchableBlock)_grandchildBlock).Map()).Returns(A.Fake<Block>());
+            A.CallTo(() => _objectMapper.Map(((ISearchableBlock)_grandchildBlock))).Returns(A.Fake<Block>());
             A.CallTo(() => _contentLoader.Get<IContent>(_grandchildBlock.ContentLink, A<LoaderOptions>.Ignored)).Returns(_grandchildBlock);
 
 
@@ -91,7 +95,7 @@ namespace EpiLastic.Test.For_IndexingHandler.IndexBlock
                         _grandchildblock_being_referenced_by_blockcontainer,
                     });
 
-            _indexingHandler = new IndexingHandler(_contentLoader, _contentSoftLinkRepo, _pageHelper);
+            _indexingHandler = new IndexingHandler(_contentLoader, _contentSoftLinkRepo, _pageHelper, _objectMapper);
         }
 
         [Test]

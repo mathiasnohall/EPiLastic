@@ -7,8 +7,8 @@
     <ProjectGuid>{131DA7EA-603D-42D3-B595-E919DA6150CE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Svea.Search.Test</RootNamespace>
-    <AssemblyName>Svea.Search.Test</AssemblyName>
+    <RootNamespace>EPiLatic.Test</RootNamespace>
+    <AssemblyName>EPiLastic.Test</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

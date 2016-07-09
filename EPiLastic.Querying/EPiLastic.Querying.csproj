@@ -8,8 +8,8 @@
     <ProjectGuid>{4F82B1E7-8645-4A61-AE13-1494420BD0C3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Svea.Search.Querying</RootNamespace>
-    <AssemblyName>Svea.Search.Querying</AssemblyName>
+    <RootNamespace>EPiLastic.Querying</RootNamespace>
+    <AssemblyName>EPiLastic.Querying</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>

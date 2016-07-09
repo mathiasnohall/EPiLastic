@@ -8,8 +8,8 @@
     <ProjectGuid>{1AC8096B-A9F1-425B-BE5B-7E84A80377C6}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Svea.Search.Indexing</RootNamespace>
-    <AssemblyName>Svea.Search.Indexing</AssemblyName>
+    <RootNamespace>EPiLastic.Indexing</RootNamespace>
+    <AssemblyName>EPiLastic.Indexing</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -167,6 +167,7 @@
     <Compile Include="ReIndexJob\ReIndexJob.cs" />
     <Compile Include="ReIndexJob\ReIndexJobHandler.cs" />
     <Compile Include="Services\IIndexingHandler.cs" />
+    <Compile Include="Services\IObjectMapper.cs" />
     <Compile Include="Services\PageHelper.cs" />
     <Compile Include="Services\SuggestionHelper.cs" />
   </ItemGroup>

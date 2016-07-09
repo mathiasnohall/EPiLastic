@@ -4,6 +4,7 @@ using EPiServer.DataAbstraction;
 using EpiLastic.Models;
 using System.Collections.Generic;
 using System.Linq;
+using EPiLastic.Indexing.Services;
 
 namespace EpiLastic.Indexing.Services
 {
@@ -19,17 +20,19 @@ namespace EpiLastic.Indexing.Services
         private readonly IContentLoader _contentLoader;
         private readonly IContentSoftLinkRepository _contentSoftLinkRepository;
         private readonly IPageHelper _pageHelper;
+        private readonly IObjectMapper _objectMapper;
 
-        public IndexingHandler(IContentLoader contentLoader, IContentSoftLinkRepository contentSoftLinkRepository, IPageHelper pageHelper)
+        public IndexingHandler(IContentLoader contentLoader, IContentSoftLinkRepository contentSoftLinkRepository, IPageHelper pageHelper, IObjectMapper objectMapper)
         {
             _contentLoader = contentLoader;
             _contentSoftLinkRepository = contentSoftLinkRepository;
             _pageHelper = pageHelper;
+            _objectMapper = objectMapper;
         }
 
         public Page IndexPage(ISearchablePage page, string language)
         {
-            var mappedPage = page.Map();
+            var mappedPage = _objectMapper.Map(page);
             mappedPage.Blocks = new List<Block>();
 
             var linksReferencedByPage = _contentSoftLinkRepository.Load(((IContent)page).ContentLink, false); // "Travel downwards"
@@ -40,7 +43,7 @@ namespace EpiLastic.Indexing.Services
                 var block = _contentLoader.Get<IContent>(link.ReferencedContentLink, LanguageSelector.Fallback(language, false));
                 if (block is ISearchableBlock)
                 {
-                    mappedPage.Blocks.Add((block as ISearchableBlock).Map());
+                    mappedPage.Blocks.Add(_objectMapper.Map((block as ISearchableBlock)));
                 }
 
                 if (block is ISearchableBlockContainer)
@@ -92,7 +95,7 @@ namespace EpiLastic.Indexing.Services
 
                 if (content is ISearchableBlock)
                 {
-                    blocks.Add((content as ISearchableBlock).Map());
+                    blocks.Add(_objectMapper.Map((content as ISearchableBlock)));
                 }
 
                 if (content is ISearchableBlockContainer)
