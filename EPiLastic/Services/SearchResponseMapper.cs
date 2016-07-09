@@ -10,6 +10,8 @@ namespace EpiLastic.Services
     {
         PagesSearchResponse Map(ISearchResponse<Page> searchResponse);
 
+        AggregationResultContainer MapTypeResponse(ISearchResponse<Page> searchResponse);
+
         AggregationResultContainer MapSubTypeResponse(ISearchResponse<Page> searchResponse);
 
         List<AutoCompleteResponse> Map(ISuggestResponse suggestResponse);
@@ -86,6 +88,31 @@ namespace EpiLastic.Services
             }
 
             return response;
+        }
+
+        public AggregationResultContainer MapTypeResponse(ISearchResponse<Page> searchResponse)
+        {
+            var aggregationResultContainer = new AggregationResultContainer();
+
+            if (searchResponse.Aggregations != null)
+            {
+                foreach (var key in searchResponse.Aggregations.Keys)
+                {
+                    var aggregationItems = new List<AggregationItem>();
+
+                    foreach (KeyedBucket item in ((BucketAggregate)searchResponse.Aggregations[key]).Items)
+                    {
+                        aggregationItems.Add(new AggregationItem()
+                        {
+                            Count = item.DocCount,
+                            Name = item.Key
+                        });
+                    }
+                    aggregationResultContainer.Items = aggregationItems;
+                }
+            }
+
+            return aggregationResultContainer;
         }
 
         public AggregationResultContainer MapSubTypeResponse(ISearchResponse<Page> searchResponse)

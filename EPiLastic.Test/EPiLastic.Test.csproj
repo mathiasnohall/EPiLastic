@@ -205,6 +205,7 @@
     <Compile Include="For_PageHelper\PageShouldBeIndexed\when_pagedata.cs" />
     <Compile Include="For_ReIndexJobHandler\when_reindex_when_elastic_fails.cs" />
     <Compile Include="For_ReIndexJobHandler\when_reindex.cs" />
+    <Compile Include="For_SearchResponseMapper\when_mapTypes.cs" />
     <Compile Include="For_SearchResponseMapper\when_mapSubTypes.cs" />
     <Compile Include="For_SearchResponseMapper\when_map_pagesearchresponse.cs" />
     <Compile Include="For_SuggestionHelper\when_GeneratePageSuggestions.cs" />
