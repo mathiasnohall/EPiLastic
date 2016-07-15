@@ -42,6 +42,7 @@ For filtering on subtypes
 
 i.eg. blocktype:
 
+```C#
 public class SearchableBlock : BlockData, ISearchableBlock
 {
     [Title]
@@ -56,9 +57,11 @@ public class SearchableBlock : BlockData, ISearchableBlock
     [Text]
     public XhtmlString ThirdBody { get; set; }	
 }
+```
 
 i.eg. pagetype:
 
+```C#
 public class SearchablePage : PageData, ISearchablePage
 {
     [HiddenKeywords]
@@ -84,3 +87,4 @@ public class SearchablePage : PageData, ISearchablePage
 
     public bool ExcludeFromSearch { get; set; }
 }
+```
