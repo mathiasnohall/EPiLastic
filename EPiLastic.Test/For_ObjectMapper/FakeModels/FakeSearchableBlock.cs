@@ -15,83 +15,17 @@ namespace EPiLatic.Test.For_ObjectMapper.FakeModels
 
         #region IContent
 
-        public Guid ContentGuid
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public Guid ContentGuid { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public ContentReference ContentLink { get; set; }
 
-        public ContentReference ContentLink
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public int ContentTypeID { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public bool IsDeleted { get; set; }
 
-        public int ContentTypeID
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
+        public string Name { get; set; }
 
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public bool IsDeleted
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
-
-        public ContentReference ParentLink
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public ContentReference ParentLink { get; set; }
 
         #endregion
     }

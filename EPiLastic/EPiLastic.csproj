@@ -68,6 +68,7 @@
     <Compile Include="Filters\SubTypesQueryFilter.cs" />
     <Compile Include="Filters\PagesQueryFilter.cs" />
     <Compile Include="Helpers\IndexAlias.cs" />
+    <Compile Include="Helpers\StringHelpers.cs" />
     <Compile Include="Models\Block.cs" />
     <Compile Include="Models\ISearchableBlock.cs" />
     <Compile Include="Models\ISearchableBlockContainer.cs" />

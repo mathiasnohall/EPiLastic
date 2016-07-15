@@ -1,11 +1,15 @@
 ﻿using EpiLastic.Indexing.Services;
 using EpiLastic.Models;
+using EPiLastic.Attributes;
 using EPiLastic.Indexing.Services;
 using EPiLatic.Test.For_ObjectMapper.FakeModels;
 using EPiServer.Core;
 using EPiServer.Web.Routing;
 using FakeItEasy;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 
 namespace EPiLastic.Test.For_ObjectMapper
 {
@@ -17,12 +21,21 @@ namespace EPiLastic.Test.For_ObjectMapper
 
         public when_mapping_SearchableBlock()
         {
-            _block = A.Fake<FakeSearchableBlock>();
+            var titleConstructor = typeof(TitleAttribute).GetConstructor(new Type[0]);
+            var titleBuilder = new CustomAttributeBuilder(titleConstructor, new object[0]);
+
+            var textConstructor = typeof(TextAttribute).GetConstructor(new Type[0]);
+            var textBuilder = new CustomAttributeBuilder(textConstructor, new object[0]);
+
+            var builders = new List<CustomAttributeBuilder>() { titleBuilder, textBuilder };
+
+            _block = A.Fake<FakeSearchableBlock>(x => x.WithAdditionalAttributes(builders));
+
+            _block.Title = "The Title";
+
             var xHtmlString = A.Fake<XhtmlString>();
             A.CallTo(() => xHtmlString.ToHtmlString()).Returns("<p>some text on Mainbody</p>");
             _block.MainBody = xHtmlString;
-
-            _block.Title = "The Title";
 
             _objectMapper = new ObjectMapper(A.Fake<ISuggestionHelper>(), A.Fake<UrlResolver>());
         }
