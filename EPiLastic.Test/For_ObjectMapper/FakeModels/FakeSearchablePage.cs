@@ -31,17 +31,6 @@ namespace EPiLatic.Test.For_ObjectMapper.FakeModels
         public ContentReference TeaserImage { get; set; }
 
 
-        public bool ExcludeFromSearch
-        {
-            get
-            {
-                throw new NotImplementedException();
-            }
-
-            set
-            {
-                throw new NotImplementedException();
-            }
-        }
+        public bool ExcludeFromSearch { get; set; }
     }
 }

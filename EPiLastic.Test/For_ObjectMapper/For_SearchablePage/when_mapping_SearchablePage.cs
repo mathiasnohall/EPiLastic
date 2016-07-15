@@ -1,11 +1,15 @@
 ﻿using EpiLastic.Indexing.Services;
 using EpiLastic.Models;
+using EPiLastic.Attributes;
 using EPiLastic.Indexing.Services;
 using EPiLatic.Test.For_ObjectMapper.FakeModels;
 using EPiServer.Core;
 using EPiServer.Web.Routing;
 using FakeItEasy;
 using NUnit.Framework;
+using System;
+using System.Collections.Generic;
+using System.Reflection.Emit;
 
 namespace EPiLastic.Test.For_ObjectMapper
 {
@@ -18,13 +22,21 @@ namespace EPiLastic.Test.For_ObjectMapper
         public when_mapping_SearchablePage()
         {
             var suggestionHelper = A.Fake<ISuggestionHelper>();
-            A.CallTo(() => suggestionHelper.GeneratePageSuggestions("page")).Returns(new[] { "page" });
+            A.CallTo(() => suggestionHelper.GeneratePageSuggestions("FakeSearchablePage")).Returns(new[] { "FakeSearchablePage" });
 
             var urlResolver = A.Fake<UrlResolver>();
             
             _objectMapper = new ObjectMapper(suggestionHelper, urlResolver);
 
-            _page = A.Fake<FakeSearchablePage>();
+            var titleConstructor = typeof(TitleAttribute).GetConstructor(new Type[0]);
+            var titleBuilder = new CustomAttributeBuilder(titleConstructor, new object[0]);
+
+            var textConstructor = typeof(TextAttribute).GetConstructor(new Type[0]);
+            var textBuilder = new CustomAttributeBuilder(textConstructor, new object[0]);
+
+            var builders = new List<CustomAttributeBuilder>() { titleBuilder, textBuilder };
+
+            _page = A.Fake<FakeSearchablePage>(x => x.WithAdditionalAttributes(builders));
             _page.Language = new System.Globalization.CultureInfo("sv");
 
             _page.HiddenKeyWord = "hidden keywords";
@@ -63,7 +75,6 @@ namespace EPiLastic.Test.For_ObjectMapper
             var mappedPage = _objectMapper.Map(_page);
 
             Assert.AreEqual("The Page Title", mappedPage.Name);
-
         }
 
         [Test]
@@ -128,8 +139,17 @@ namespace EPiLastic.Test.For_ObjectMapper
             var mappedPage = _objectMapper.Map(_page);
 
             Assert.IsNotEmpty(mappedPage.AutoComplete.Input);
-            Assert.AreEqual("page", mappedPage.AutoComplete.Output);
+            Assert.AreEqual("FakeSearchablePage", mappedPage.AutoComplete.Output);
         }
-        
+
+        [Test]
+        public void when_mapping_SearchablePage_it_should_map_type_and_subtype()
+        {
+            var mappedPage = _objectMapper.Map(_page);
+            
+            Assert.AreEqual("MainType", mappedPage.Type);
+            Assert.AreEqual("SubType", mappedPage.SubType);
+        }
+
     }
 }
