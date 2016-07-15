@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPiLastic", "EPiLastic\EPiLastic.csproj", "{A58F8CD3-A5F3-43D5-B97B-9BF5F75568CD}"
 EndProject
@@ -10,6 +10,11 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPiLastic.Indexing", "EPiLastic.Indexing\EPiLastic.Indexing.csproj", "{1AC8096B-A9F1-425B-BE5B-7E84A80377C6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPiLastic.Querying", "EPiLastic.Querying\EPiLastic.Querying.csproj", "{4F82B1E7-8645-4A61-AE13-1494420BD0C3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FF51AABC-3AB3-4DCE-8426-3AEF9559BA6C}"
+	ProjectSection(SolutionItems) = preProject
+		Readme.md = Readme.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
