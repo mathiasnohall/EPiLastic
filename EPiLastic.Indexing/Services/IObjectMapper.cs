@@ -1,5 +1,6 @@
 ﻿using EpiLastic.Indexing.Services;
 using EpiLastic.Models;
+using EPiServer.Web.Routing;
 using System;
 
 namespace EPiLastic.Indexing.Services
@@ -15,15 +16,19 @@ namespace EPiLastic.Indexing.Services
     public class ObjectMapper : IObjectMapper
     {
         private readonly ISuggestionHelper _suggestionHelper;
+        private readonly UrlResolver _urlResolver;
 
-        public ObjectMapper(ISuggestionHelper suggestionHelper)
+        public ObjectMapper(ISuggestionHelper suggestionHelper, UrlResolver urlResolver)
         {
             _suggestionHelper = suggestionHelper;
+            _urlResolver = urlResolver;
         }
 
         public Block Map(ISearchableBlock block)
         {
-            throw new NotImplementedException();
+            var mappedBlock = new Block();
+
+            return mappedBlock;
         }
 
         public Page Map(ISearchablePage page)
