@@ -13,6 +13,13 @@ namespace EPiLatic.Test.For_ObjectMapper.FakeModels
         [Text]
         public XhtmlString MainBody { get; set; }
 
+        [Text]
+        public string SecondBody { get; set; }
+
+        [Text]
+        public XhtmlString ThirdBody { get; set; }
+
+
         #region IContent
 
         public Guid ContentGuid { get; set; }

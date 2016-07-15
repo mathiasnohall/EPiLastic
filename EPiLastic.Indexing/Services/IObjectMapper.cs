@@ -51,15 +51,16 @@ namespace EPiLastic.Indexing.Services
 
                     if (textAttribute != null)
                     {
-                        var value = propertyInfo.GetValue(block, null) as XhtmlString;
-                        if (value != null)
+                        var xhtmlStringValue = propertyInfo.GetValue(block, null) as XhtmlString;
+                        if (xhtmlStringValue != null)
                         {
-                            mappedBlock.MainBody = value.ToHtmlString().StripHtml();
+                            mappedBlock.MainBody += mappedBlock.MainBody != null ? " " + xhtmlStringValue.ToHtmlString().StripHtml() : xhtmlStringValue.ToHtmlString().StripHtml();
                         }
+
+                        var stringValue = propertyInfo.GetValue(block, null) as string;
+                        if(stringValue != null)
+                            mappedBlock.MainBody += mappedBlock.MainBody != null ? " " + stringValue : stringValue;
                     }
-
-
-
                 }
             }
 
