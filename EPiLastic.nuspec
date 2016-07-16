@@ -1,0 +1,23 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>EPiLastic</id>
+    <version>$version$</version>
+    <title>EPiLastic</title>
+    <authors>Mathias Nohall</authors>
+    <owners>Mathias Nohall</owners>
+    <projectUrl>https://github.com/mathiasnohall/EPiLastic</projectUrl>
+    <description>A search solution for EPiServer and Elastic Search.</description>
+    <dependencies>
+      <dependency id="Elasticsearch.Net" version="[2,3]" />
+      <dependency id="NEST" version="[2,3]" />
+      <dependency id="EPiServer.CMS.Core" version="[9,10]" />
+      <dependency id="EPiServer.Framework" version="[9,10]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="EPiLastic\bin\EPiLastic.dll" target="lib" />
+    <file src="EPiLastic.Indexing\bin\EPiLastic.Indexing.dll" target="lib" />
+    <file src="EPiLastic.Querying\bin\EPiLastic.Querying.dll" target="lib" />
+  </files>
+</package>
