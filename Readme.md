@@ -3,7 +3,15 @@ EPiLastic
 A project to index episerver pages and blocks into an elastic server cluster or node.
 provides filtering on type and subtypes. Autocompletion. 
 
-usage:
+### Installing
+
+From the package manager console:
+
+	PM> Install-Package EPiLastic
+
+or by simply searching for `EPiLastic` in the package manager UI.
+
+### Usage:
 
 	Install an elastic search 2.x node
 
