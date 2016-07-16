@@ -16,8 +16,7 @@
     </dependencies>
   </metadata>
   <files>
-    <file src="EPiLastic\bin\EPiLastic.dll" target="lib" />
-    <file src="EPiLastic.Indexing\bin\EPiLastic.Indexing.dll" target="lib" />
-    <file src="EPiLastic.Querying\bin\EPiLastic.Querying.dll" target="lib" />
+    <file src="..\EPiLastic.Indexing\bin\EPiLastic.Indexing.dll" target="lib\net461" />
+    <file src="..\EPiLastic.Querying\bin\EPiLastic.Querying.dll" target="lib\net461" />
   </files>
 </package>
