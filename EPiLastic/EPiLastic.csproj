@@ -83,7 +83,9 @@
     <Compile Include="Wrappers\DateTimeWrapper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="EPiLastic.nuspec" />
+    <None Include="EPiLastic.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
