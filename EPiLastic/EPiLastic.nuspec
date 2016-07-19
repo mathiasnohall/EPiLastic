@@ -9,7 +9,7 @@
     <projectUrl>https://github.com/mathiasnohall/EPiLastic</projectUrl>
     <description>A search solution for EPiServer and Elastic Search.</description>
     <dependencies>
-      <dependency id="Elasticsearch.Net" version="[2,3]" />
+      <dependency id="Elasticsearch.Net" version="[2,2.4]" />
       <dependency id="NEST" version="[2,3]" />
       <dependency id="EPiServer.CMS.Core" version="[9,10]" />
       <dependency id="EPiServer.Framework" version="[9,10]" />
