@@ -163,6 +163,7 @@
     <Compile Include="EventHandling\ContentEvents.cs" />
     <Compile Include="EventHandling\EPiServerEventHandler.cs" />
     <Compile Include="IndexClient.cs" />
+    <Compile Include="Initialization\EPiLasticInitalizationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ReIndexJob\ReIndexJob.cs" />
     <Compile Include="ReIndexJob\ReIndexJobHandler.cs" />
