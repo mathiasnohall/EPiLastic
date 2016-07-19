@@ -3,6 +3,10 @@ EPiLastic
 A project to index episerver pages and blocks into an elastic server cluster or node.
 provides filtering on type and subtypes. Autocompletion. 
 
+The solution consists of two main projects. A indexer and a queruyer. The indexer has a reindex job and an event handler wich listens for content events. The queryer is the ISearchClient in the query project. It has some basic methods for querying Nest and Elastic Search.
+
+For full implementation of Searches. See example project EPiLastic.API here: https://github.com/mathiasnohall/EPiLastic.Api
+
 ### Installing
 
 From the package manager console:
