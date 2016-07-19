@@ -14,7 +14,7 @@ namespace EpiLastic.Querying
 
         Task<ISearchResponse<Page>> GetPagesAsync(PagesQueryFilter filter);
 
-        Task<ISearchResponse<Page>> GetTypesAsync(SubTypesQueryFilter filter);
+        Task<ISearchResponse<Page>> GetTypesAsync(TypesQueryFilter filter);
 
         Task<ISearchResponse<Page>> GetSubTypesAsync(SubTypesQueryFilter filter);
     }   
@@ -86,14 +86,13 @@ namespace EpiLastic.Querying
             return response;
         }
 
-        public async Task<ISearchResponse<Page>> GetTypesAsync(SubTypesQueryFilter filter)
+        public async Task<ISearchResponse<Page>> GetTypesAsync(TypesQueryFilter filter)
         {
             var alias = IndexAlias.GetAlias(filter.Language);
 
             var response = await _elasticClient.SearchAsync<Page>(x => x            
             .Aggregations(a => a
-                .Terms("Type", t => t
-                    .Field(f => f.Type)
+                .Terms("Type", t => t                    
                     .MinimumDocumentCount(1)
                 )
             )

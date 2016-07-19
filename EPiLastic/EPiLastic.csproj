@@ -133,6 +133,7 @@
     <Compile Include="Attributes\TitleAttribute.cs" />
     <Compile Include="Attributes\TypeAttribute.cs" />
     <Compile Include="Filters\AutoCompleteQueryFilter.cs" />
+    <Compile Include="Filters\TypesQueryFilter.cs" />
     <Compile Include="Filters\SubTypesQueryFilter.cs" />
     <Compile Include="Filters\PagesQueryFilter.cs" />
     <Compile Include="Helpers\IndexAlias.cs" />
