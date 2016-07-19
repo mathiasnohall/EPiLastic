@@ -23,8 +23,6 @@ namespace EPiLastic.Indexing.Initialization
             context.Container.Configure(c => c.For<IIndexingHandler>().Use<IndexingHandler>());
             context.Container.Configure(c => c.For<EpiLastic.Wrappers.IDateTimeWrapper>().Use<EpiLastic.Wrappers.DateTimeWrapper>());
             context.Container.Configure(c => c.For<ISuggestionHelper>().Use<SuggestionHelper>());
-
-            context.Container.Configure(c => c.For<ISearchResponseMapper>().Use<SearchResponseMapper>());
         }
 
         public void Initialize(InitializationEngine context)
