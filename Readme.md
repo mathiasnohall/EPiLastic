@@ -5,7 +5,7 @@ provides filtering on type and subtypes. Autocompletion.
 
 The solution consists of two main projects. A indexer and a queruyer. The indexer has a reindex job and an event handler wich listens for content events. The queryer is the ISearchClient in the query project. It has some basic methods for querying Nest and Elastic Search.
 
-For full implenentation of for Searches. See example project EPiLastic.EPI here https://github.com/mathiasnohall/EPiLastic.Api
+For full implementation of Searches. See example project EPiLastic.API here: https://github.com/mathiasnohall/EPiLastic.Api
 
 ### Installing
 
