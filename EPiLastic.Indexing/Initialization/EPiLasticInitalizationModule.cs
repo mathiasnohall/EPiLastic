@@ -3,6 +3,7 @@ using EpiLastic.Indexing.EventHandling;
 using EpiLastic.Indexing.ReIndexJob;
 using EpiLastic.Indexing.Services;
 using EpiLastic.Services;
+using EPiLastic.Indexing.Services;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
@@ -23,6 +24,7 @@ namespace EPiLastic.Indexing.Initialization
             context.Container.Configure(c => c.For<IIndexingHandler>().Use<IndexingHandler>());
             context.Container.Configure(c => c.For<EpiLastic.Wrappers.IDateTimeWrapper>().Use<EpiLastic.Wrappers.DateTimeWrapper>());
             context.Container.Configure(c => c.For<ISuggestionHelper>().Use<SuggestionHelper>());
+            context.Container.Configure(c => c.For<IObjectMapper>().Use<ObjectMapper>());
         }
 
         public void Initialize(InitializationEngine context)
