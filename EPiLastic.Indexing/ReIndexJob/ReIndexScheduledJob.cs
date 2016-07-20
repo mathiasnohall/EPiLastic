@@ -4,14 +4,14 @@ using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
 using EPiLastic.Indexing.ReIndexJob;
 
-namespace EPiLastic.Indexing.ReIndexJob
+namespace EPiLastic.Indexing
 {
     [ScheduledPlugIn(DisplayName = "ReIndexJob")]
-    public class ReIndexJob : ScheduledJobBase
+    public class ReIndexScheduledJob : ScheduledJobBase
     {
         private bool _stopSignaled;
 
-        public ReIndexJob()
+        public ReIndexScheduledJob()
         {
             IsStoppable = true;
         }

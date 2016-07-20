@@ -165,7 +165,7 @@
     <Compile Include="IndexClient.cs" />
     <Compile Include="Initialization\EPiLasticInitalizationModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ReIndexJob\ReIndexJob.cs" />
+    <Compile Include="ReIndexJob\ReIndexScheduledJob.cs" />
     <Compile Include="ReIndexJob\ReIndexJobHandler.cs" />
     <Compile Include="Services\IIndexingHandler.cs" />
     <Compile Include="Services\IObjectMapper.cs" />
