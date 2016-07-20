@@ -190,8 +190,6 @@
     <Compile Include="For_IndexingHandler\IndexBlock\when_index_blockContainer.cs" />
     <Compile Include="For_IndexingHandler\IndexBlock\when_index_nestled_block.cs" />
     <Compile Include="For_IndexingHandler\IndexPage\when_indexpage.cs" />
-    <Compile Include="For_ObjectMapper\FakeModels\FakeSearchablePage.cs" />
-    <Compile Include="For_ObjectMapper\FakeModels\FakeSearchableBlock.cs" />
     <Compile Include="For_ObjectMapper\For_SearchableBlock\when_mapping_SearchableBlock_multiple_textattributes.cs" />
     <Compile Include="For_ObjectMapper\For_SearchablePage\when_mapping_SearchablePage_when_no_title_attribute.cs" />
     <Compile Include="For_ObjectMapper\For_SearchablePage\when_mapping_SearchablePage.cs" />
@@ -225,6 +223,10 @@
     <ProjectReference Include="..\EPiLastic.Querying\EPiLastic.Querying.csproj">
       <Project>{4f82b1e7-8645-4a61-ae13-1494420bd0c3}</Project>
       <Name>EPiLastic.Querying</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EPiLastic.Test.FakeModels\EPiLastic.Test.FakeModels.csproj">
+      <Project>{b4806f0f-cee4-4320-9c0e-0840f6a82cff}</Project>
+      <Name>EPiLastic.Test.FakeModels</Name>
     </ProjectReference>
     <ProjectReference Include="..\EPiLastic\EPiLastic.csproj">
       <Project>{a58f8cd3-a5f3-43d5-b97b-9bf5f75568cd}</Project>

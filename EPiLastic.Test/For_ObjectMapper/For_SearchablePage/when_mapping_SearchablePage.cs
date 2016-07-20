@@ -1,8 +1,6 @@
 ﻿using EPiLastic.Indexing.Services;
 using EPiLastic.Models;
 using EPiLastic.Attributes;
-using EPiLastic.Indexing.Services;
-using EPiLatic.Test.For_ObjectMapper.FakeModels;
 using EPiServer.Core;
 using EPiServer.Web.Routing;
 using FakeItEasy;
@@ -10,6 +8,7 @@ using NUnit.Framework;
 using System;
 using System.Collections.Generic;
 using System.Reflection.Emit;
+using EPiLastic.Test.FakeModels;
 
 namespace EPiLastic.Test.For_ObjectMapper
 {

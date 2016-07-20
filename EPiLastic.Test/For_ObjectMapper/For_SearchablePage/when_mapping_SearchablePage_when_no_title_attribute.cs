@@ -1,5 +1,5 @@
 ﻿using EPiLastic.Indexing.Services;
-using EPiLatic.Test.For_ObjectMapper.FakeModels;
+using EPiLastic.Test.FakeModels;
 using EPiServer.Web.Routing;
 using FakeItEasy;
 using NUnit.Framework;

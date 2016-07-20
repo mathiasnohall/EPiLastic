@@ -3,7 +3,7 @@ using EPiLastic.Attributes;
 using EPiServer.Core;
 using System;
 
-namespace EPiLatic.Test.For_ObjectMapper.FakeModels
+namespace EPiLastic.Test.FakeModels
 {
     public class FakeSearchablePage : PageData, ISearchablePage
     {
