@@ -69,6 +69,8 @@ namespace EPiLastic.Indexing.Services
         {
             var mappedPage = new Page();
 
+            mappedPage.Name = ((PageData)page).Name;
+
             mappedPage.NavigateUrl = _urlResolver.GetUrl(((PageData)page).ContentLink, ((PageData)page).Language.TwoLetterISOLanguageName);
             mappedPage.ContentGuid = ((PageData)page).ContentGuid;
             mappedPage.Created = ((PageData)page).Created;
@@ -88,7 +90,8 @@ namespace EPiLastic.Indexing.Services
                     if (titleAttribute != null)
                     {
                         var value = propertyInfo.GetValue(page, null) as string;
-                        mappedPage.Name = value;
+                        if(value != null)
+                            mappedPage.Name = value;
                         continue;
                     }
 

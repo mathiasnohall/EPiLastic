@@ -193,6 +193,7 @@
     <Compile Include="For_ObjectMapper\FakeModels\FakeSearchablePage.cs" />
     <Compile Include="For_ObjectMapper\FakeModels\FakeSearchableBlock.cs" />
     <Compile Include="For_ObjectMapper\For_SearchableBlock\when_mapping_SearchableBlock_multiple_textattributes.cs" />
+    <Compile Include="For_ObjectMapper\For_SearchablePage\when_mapping_SearchablePage_when_no_title_attribute.cs" />
     <Compile Include="For_ObjectMapper\For_SearchablePage\when_mapping_SearchablePage.cs" />
     <Compile Include="For_ObjectMapper\For_SearchableBlock\when_mapping_SearchableBlock.cs" />
     <Compile Include="For_PageHelper\PageShouldBeDeleted\when_exclude_from_search_checkboxed_ISearchablePage.cs" />
