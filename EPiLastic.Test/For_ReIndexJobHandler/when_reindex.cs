@@ -1,19 +1,19 @@
 ﻿using NUnit.Framework;
 using EPiServer;
 using EPiServer.DataAbstraction;
-using EpiLastic.Wrappers;
+using EPiLastic.Wrappers;
 using FakeItEasy;
-using EpiLastic.Models;
+using EPiLastic.Models;
 using System;
 using EPiServer.Core;
 using System.Collections.Generic;
 using System.Globalization;
 using EPiServer.Web;
-using EpiLastic.Indexing;
-using EpiLastic.Indexing.ReIndexJob;
-using EpiLastic.Indexing.Services;
+using EPiLastic.Indexing;
+using EPiLastic.Indexing.ReIndexJob;
+using EPiLastic.Indexing.Services;
 
-namespace EpiLastic.Test.For_ReIndexJobHandler
+namespace EPiLastic.Test.For_ReIndexJobHandler
 {
     [TestFixture]
     public class when_reindex

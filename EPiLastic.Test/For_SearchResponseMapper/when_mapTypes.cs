@@ -1,11 +1,11 @@
 ﻿using FakeItEasy;
 using Nest;
 using NUnit.Framework;
-using EpiLastic.Models;
-using EpiLastic.Services;
+using EPiLastic.Models;
+using EPiLastic.Services;
 using System.Collections.Generic;
 
-namespace EpiLastic.Test.For_SearchResponseMapper
+namespace EPiLastic.Test.For_SearchResponseMapper
 {
     [TestFixture]
     public class when_mapTypes

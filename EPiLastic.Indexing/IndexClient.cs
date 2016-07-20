@@ -1,11 +1,11 @@
-﻿using EpiLastic.Models;
+﻿using EPiLastic.Models;
 using System.Threading.Tasks;
 using System;
 using Nest;
-using EpiLastic.Helpers;
+using EPiLastic.Helpers;
 using System.Configuration;
 
-namespace EpiLastic.Indexing
+namespace EPiLastic.Indexing
 {
     public interface IIndexClient
     {

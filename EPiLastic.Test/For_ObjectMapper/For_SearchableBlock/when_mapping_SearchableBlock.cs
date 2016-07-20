@@ -1,5 +1,5 @@
-﻿using EpiLastic.Indexing.Services;
-using EpiLastic.Models;
+﻿using EPiLastic.Indexing.Services;
+using EPiLastic.Models;
 using EPiLastic.Attributes;
 using EPiLastic.Indexing.Services;
 using EPiLatic.Test.For_ObjectMapper.FakeModels;

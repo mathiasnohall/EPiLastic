@@ -4,7 +4,7 @@ using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;
 using System.Threading.Tasks;
 
-namespace EpiLastic.Indexing.EventHandling
+namespace EPiLastic.Indexing.EventHandling
 {
     [InitializableModule]
     [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]

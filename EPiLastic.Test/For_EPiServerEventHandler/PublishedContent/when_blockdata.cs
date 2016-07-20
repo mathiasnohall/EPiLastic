@@ -2,14 +2,14 @@
 using EPiServer.Core;
 using FakeItEasy;
 using NUnit.Framework;
-using EpiLastic.Indexing;
-using EpiLastic.Indexing.EventHandling;
-using EpiLastic.Indexing.Services;
-using EpiLastic.Models;
+using EPiLastic.Indexing;
+using EPiLastic.Indexing.EventHandling;
+using EPiLastic.Indexing.Services;
+using EPiLastic.Models;
 using System;
 using System.Globalization;
 
-namespace EpiLastic.Test.For_EPiServerEventHandler.PublishedContent
+namespace EPiLastic.Test.For_EPiServerEventHandler.PublishedContent
 {
     [TestFixture]
     public class when_blockdata

@@ -2,12 +2,12 @@
 using EPiServer.Web;
 using FakeItEasy;
 using NUnit.Framework;
-using EpiLastic.Indexing.Services;
-using EpiLastic.Models;
-using EpiLastic.Wrappers;
+using EPiLastic.Indexing.Services;
+using EPiLastic.Models;
+using EPiLastic.Wrappers;
 using System;
 
-namespace EpiLastic.Test.For_PageHelper.PageShouldBeIndexed
+namespace EPiLastic.Test.For_PageHelper.PageShouldBeIndexed
 {
     [TestFixture]
     public class when_PageData

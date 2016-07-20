@@ -1,8 +1,5 @@
-﻿using EpiLastic.Indexing;
-using EpiLastic.Indexing.EventHandling;
-using EpiLastic.Indexing.ReIndexJob;
-using EpiLastic.Indexing.Services;
-using EpiLastic.Services;
+﻿using EPiLastic.Indexing.EventHandling;
+using EPiLastic.Indexing.ReIndexJob;
 using EPiLastic.Indexing.Services;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
@@ -22,7 +19,7 @@ namespace EPiLastic.Indexing.Initialization
             context.Container.Configure(c => c.For<IPageHelper>().Use<PageHelper>());
             context.Container.Configure(c => c.For<IReIndexJobHandler>().Use<ReIndexJobHandler>());
             context.Container.Configure(c => c.For<IIndexingHandler>().Use<IndexingHandler>());
-            context.Container.Configure(c => c.For<EpiLastic.Wrappers.IDateTimeWrapper>().Use<EpiLastic.Wrappers.DateTimeWrapper>());
+            context.Container.Configure(c => c.For<EPiLastic.Wrappers.IDateTimeWrapper>().Use<EPiLastic.Wrappers.DateTimeWrapper>());
             context.Container.Configure(c => c.For<ISuggestionHelper>().Use<SuggestionHelper>());
             context.Container.Configure(c => c.For<IObjectMapper>().Use<ObjectMapper>());
         }

@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace EpiLastic.Models
+namespace EPiLastic.Models
 {
     public class SuggestField
     {

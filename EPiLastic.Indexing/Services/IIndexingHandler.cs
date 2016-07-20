@@ -1,12 +1,11 @@
 ﻿using EPiServer;
 using EPiServer.Core;
 using EPiServer.DataAbstraction;
-using EpiLastic.Models;
+using EPiLastic.Models;
 using System.Collections.Generic;
 using System.Linq;
-using EPiLastic.Indexing.Services;
 
-namespace EpiLastic.Indexing.Services
+namespace EPiLastic.Indexing.Services
 {
     public interface IIndexingHandler
     {

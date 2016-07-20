@@ -1,10 +1,10 @@
 ﻿using Nest;
-using EpiLastic.Models;
-using EpiLastic.Models.Responses;
+using EPiLastic.Models;
+using EPiLastic.Models.Responses;
 using System.Collections.Generic;
 using System;
 
-namespace EpiLastic.Services
+namespace EPiLastic.Services
 {
     public interface ISearchResponseMapper
     {

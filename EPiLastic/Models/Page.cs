@@ -2,7 +2,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace EpiLastic.Models
+namespace EPiLastic.Models
 {
     [ElasticsearchType(Name = "page", IdProperty = "ContentGuid")]
     public class Page

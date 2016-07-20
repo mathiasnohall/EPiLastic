@@ -1,4 +1,4 @@
-﻿namespace EpiLastic.Models
+﻿namespace EPiLastic.Models
 {
     public interface ISearchableBlockContainer
     {

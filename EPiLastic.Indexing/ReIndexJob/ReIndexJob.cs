@@ -2,9 +2,9 @@
 using EPiServer.PlugIn;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
-using EpiLastic.Indexing.ReIndexJob;
+using EPiLastic.Indexing.ReIndexJob;
 
-namespace EpiLastic.Inexing.ReIndexJob
+namespace EPiLastic.Indexing.ReIndexJob
 {
     [ScheduledPlugIn(DisplayName = "ReIndexJob")]
     public class ReIndexJob : ScheduledJobBase

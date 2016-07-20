@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace EpiLastic.Models.Responses
+namespace EPiLastic.Models.Responses
 {
     public class PagesSearchResponse
     {

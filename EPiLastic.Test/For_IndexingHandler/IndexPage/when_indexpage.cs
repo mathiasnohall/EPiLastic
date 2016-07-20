@@ -4,12 +4,12 @@ using EPiServer.DataAbstraction;
 using EPiServer.Web;
 using FakeItEasy;
 using NUnit.Framework;
-using EpiLastic.Indexing.Services;
-using EpiLastic.Models;
+using EPiLastic.Indexing.Services;
+using EPiLastic.Models;
 using System.Collections.Generic;
 using EPiLastic.Indexing.Services;
 
-namespace EpiLastic.Test.For_IndexingHandler.IndexPage
+namespace EPiLastic.Test.For_IndexingHandler.IndexPage
 {
     [TestFixture]
     public class when_indexpage

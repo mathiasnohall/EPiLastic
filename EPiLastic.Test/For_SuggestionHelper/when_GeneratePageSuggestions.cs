@@ -1,8 +1,8 @@
 ﻿using NUnit.Framework;
-using EpiLastic.Helpers;
-using EpiLastic.Indexing.Services;
+using EPiLastic.Helpers;
+using EPiLastic.Indexing.Services;
 
-namespace EpiLastic.Test.For_SuggestionHelper
+namespace EPiLastic.Test.For_SuggestionHelper
 {
     [TestFixture]
     public class when_GeneratePageSuggestions

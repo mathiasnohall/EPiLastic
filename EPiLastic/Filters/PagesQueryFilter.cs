@@ -1,4 +1,4 @@
-﻿namespace EpiLastic.Filters
+﻿namespace EPiLastic.Filters
 {
     public class PagesQueryFilter
     {

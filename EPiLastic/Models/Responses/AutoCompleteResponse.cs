@@ -1,4 +1,4 @@
-﻿namespace EpiLastic.Models.Responses
+﻿namespace EPiLastic.Models.Responses
 {
     public class AutoCompleteResponse
     {

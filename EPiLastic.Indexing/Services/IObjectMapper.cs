@@ -1,10 +1,8 @@
-﻿using EpiLastic.Indexing.Services;
-using EpiLastic.Models;
+﻿using EPiLastic.Models;
 using EPiLastic.Attributes;
 using EPiLastic.Helpers;
 using EPiServer.Core;
 using EPiServer.Web.Routing;
-using System;
 using System.Linq;
 
 namespace EPiLastic.Indexing.Services

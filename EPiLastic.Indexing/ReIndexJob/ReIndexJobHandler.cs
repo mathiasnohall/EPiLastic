@@ -1,14 +1,14 @@
 ﻿using EPiServer;
 using EPiServer.DataAbstraction;
-using EpiLastic.Helpers;
-using EpiLastic.Wrappers;
+using EPiLastic.Helpers;
+using EPiLastic.Wrappers;
 using EPiServer.Web;
 using EPiServer.Core;
-using EpiLastic.Models;
+using EPiLastic.Models;
 using System.Linq;
-using EpiLastic.Indexing.Services;
+using EPiLastic.Indexing.Services;
 
-namespace EpiLastic.Indexing.ReIndexJob
+namespace EPiLastic.Indexing.ReIndexJob
 {
     public interface IReIndexJobHandler
     {

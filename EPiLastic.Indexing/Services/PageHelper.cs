@@ -1,11 +1,11 @@
 ﻿using EPiServer.Core;
-using EpiLastic.Wrappers;
-using EpiLastic.Models;
 using EPiServer.Web;
 using System.Linq;
 using EPiServer.Security;
+using EPiLastic.Wrappers;
+using EPiLastic.Models;
 
-namespace EpiLastic.Indexing.Services
+namespace EPiLastic.Indexing.Services
 {
     public interface IPageHelper
     {

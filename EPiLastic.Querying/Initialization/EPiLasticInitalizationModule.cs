@@ -1,5 +1,5 @@
-﻿using EpiLastic.Querying;
-using EpiLastic.Services;
+﻿using EPiLastic.Querying;
+using EPiLastic.Services;
 using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.ServiceLocation;

@@ -1,12 +1,12 @@
 ﻿using Nest;
-using EpiLastic.Filters;
-using EpiLastic.Helpers;
-using EpiLastic.Models;
+using EPiLastic.Filters;
+using EPiLastic.Helpers;
+using EPiLastic.Models;
 using System;
 using System.Configuration;
 using System.Threading.Tasks;
 
-namespace EpiLastic.Querying
+namespace EPiLastic.Querying
 {
     public interface ISearchClient
     {

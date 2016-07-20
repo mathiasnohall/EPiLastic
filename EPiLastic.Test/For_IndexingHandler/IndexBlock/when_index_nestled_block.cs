@@ -4,13 +4,13 @@ using EPiServer.DataAbstraction;
 using EPiServer.Web;
 using FakeItEasy;
 using NUnit.Framework;
-using EpiLastic.Indexing.Services;
-using EpiLastic.Models;
+using EPiLastic.Indexing.Services;
+using EPiLastic.Models;
 using System.Collections.Generic;
 using System.Linq;
 using EPiLastic.Indexing.Services;
 
-namespace EpiLastic.Test.For_IndexingHandler.IndexBlock
+namespace EPiLastic.Test.For_IndexingHandler.IndexBlock
 {
     [TestFixture]
     public class when_index_nest_block

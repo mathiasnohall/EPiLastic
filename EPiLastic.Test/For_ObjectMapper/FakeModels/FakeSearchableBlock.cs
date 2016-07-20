@@ -1,4 +1,4 @@
-﻿using EpiLastic.Models;
+﻿using EPiLastic.Models;
 using EPiLastic.Attributes;
 using EPiServer.Core;
 using System;

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 
-namespace EpiLastic.Indexing.Services
-{
+namespace EPiLastic.Indexing.Services
+{ 
     public interface ISuggestionHelper
     {
         string[] GeneratePageSuggestions(string pageName);

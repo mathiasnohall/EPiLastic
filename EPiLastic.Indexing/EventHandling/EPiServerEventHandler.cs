@@ -1,10 +1,10 @@
 ﻿using EPiServer;
 using EPiServer.Core;
-using EpiLastic.Indexing.Services;
-using EpiLastic.Models;
+using EPiLastic.Models;
 using System.Threading.Tasks;
+using EPiLastic.Indexing.Services;
 
-namespace EpiLastic.Indexing.EventHandling
+namespace EPiLastic.Indexing.EventHandling
 {
     public interface IEPiServerEventHandler
     {

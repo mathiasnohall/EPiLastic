@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace EpiLastic.Wrappers
+namespace EPiLastic.Wrappers
 {
     public interface IDateTimeWrapper
     {
