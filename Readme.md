@@ -102,9 +102,10 @@ public class SearchablePage : PageData, ISearchablePage
 ```
 ### Or map your own pages
 
-simply initalize an instance implementing IObjectmapper in an iniatlizationmodule
+simply initialize an instance implementing IObjectmapper in an iniatlizationmodule
 
-'''C#
+```C#
+
 	[InitializableModule]
     public class YourInitalizationModule : IConfigurableModule
     {
@@ -125,4 +126,5 @@ simply initalize an instance implementing IObjectmapper in an iniatlizationmodul
         {
         }
     }
-'''
+
+```
