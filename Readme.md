@@ -111,7 +111,7 @@ simply initialize an instance implementing IObjectmapper in an iniatlizationmodu
     {
         void IConfigurableModule.ConfigureContainer(ServiceConfigurationContext context)
         {         
-            context.Container.Configure(c => c.For<IObjectMapper>().Use<ObjectMapper>());
+            context.Container.Configure(c => c.For<IObjectMapper>().Use<YourOwnObjectMapper>());
         }
 
         public void Initialize(InitializationEngine context)

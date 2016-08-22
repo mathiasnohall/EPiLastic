@@ -75,7 +75,7 @@ namespace EPiLastic.Indexing.Services
 
             mappedPage.Name = ((PageData)page).Name;
 
-            mappedPage.NavigateUrl = _urlResolver.GetUrl(((PageData)page).ContentLink, ((PageData)page).Language.TwoLetterISOLanguageName);
+            mappedPage.NavigateUrl = _urlResolver.GetUrl(((PageData)page).ContentLink, ((PageData)page).Language.Name);
             mappedPage.ContentGuid = ((PageData)page).ContentGuid;
             mappedPage.Created = ((PageData)page).Created;
 

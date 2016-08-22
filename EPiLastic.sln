@@ -14,6 +14,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{FF51AABC-3AB3-4DCE-8426-3AEF9559BA6C}"
 	ProjectSection(SolutionItems) = preProject
 		Readme.md = Readme.md
+		WebEssentials2015-Settings.json = WebEssentials2015-Settings.json
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EPiLastic.Test.FakeModels", "EPiLastic.Test.FakeModels\EPiLastic.Test.FakeModels.csproj", "{B4806F0F-CEE4-4320-9C0E-0840F6A82CFF}"

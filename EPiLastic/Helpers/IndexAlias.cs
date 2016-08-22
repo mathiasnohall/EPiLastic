@@ -8,7 +8,7 @@ namespace EPiLastic.Helpers
         public static string GetAlias(string language)
         {
             var alias = ConfigurationManager.AppSettings["IndexAliasName"];
-            return alias + "_" + language;
+            return alias + "_" + language.ToLower();
         }
     }
 }

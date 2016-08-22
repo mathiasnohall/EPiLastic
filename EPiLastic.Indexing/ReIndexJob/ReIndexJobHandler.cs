@@ -56,7 +56,7 @@ namespace EPiLastic.Indexing.ReIndexJob
 
             foreach(var enabledLangue in enabledLanguages)
             {
-                var language = enabledLangue.Culture.TwoLetterISOLanguageName;
+                var language = enabledLangue.Culture.Name;
                 var indexName = "epilastic_" + language +  "_" + timeStamp.ToString("yyyyMMdd\\_hhmmss");
                 _indexClient.CreateIndex(indexName);
 

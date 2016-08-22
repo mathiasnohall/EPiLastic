@@ -34,19 +34,19 @@ namespace EPiLastic.Indexing.EventHandling
                 foreach(var cultureInfo in page.ExistingLanguages)
                 if (_pageHelper.PageShouldBeIndexed(page))
                 {
-                    var mappedPage = _indexingHandler.IndexPage((ISearchablePage)page, cultureInfo.TwoLetterISOLanguageName);
-                    await _indexClient.IndexAsyncUsingAlias(mappedPage, cultureInfo.TwoLetterISOLanguageName);
+                    var mappedPage = _indexingHandler.IndexPage((ISearchablePage)page, cultureInfo.Name);
+                    await _indexClient.IndexAsyncUsingAlias(mappedPage, cultureInfo.Name);
                 }
                 else if (_pageHelper.PageShouldBeDeleted(page))
                 {
-                    await _indexClient.DeleteAsync(e.Content.ContentGuid, cultureInfo.TwoLetterISOLanguageName);
+                    await _indexClient.DeleteAsync(e.Content.ContentGuid, cultureInfo.Name);
                 }
             }
         }
 
         public async Task PublishedContent(ContentEventArgs e)
         {
-            string language = (e.Content as ILocale).Language.TwoLetterISOLanguageName;
+            string language = (e.Content as ILocale).Language.Name;
 
             if (_pageHelper.PageShouldBeIndexed(e.Content as PageData))
             {
