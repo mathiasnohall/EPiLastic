@@ -100,3 +100,29 @@ public class SearchablePage : PageData, ISearchablePage
     public bool ExcludeFromSearch { get; set; }
 }
 ```
+### Or map your own pages
+
+simply initalize an instance implementing IObjectmapper in an iniatlizationmodule
+
+'''C#
+	[InitializableModule]
+    public class YourInitalizationModule : IConfigurableModule
+    {
+        void IConfigurableModule.ConfigureContainer(ServiceConfigurationContext context)
+        {         
+            context.Container.Configure(c => c.For<IObjectMapper>().Use<ObjectMapper>());
+        }
+
+        public void Initialize(InitializationEngine context)
+        {
+        }
+
+        public void Uninitialize(InitializationEngine context)
+        {
+        }
+
+        public void Preload(string[] parameters)
+        {
+        }
+    }
+'''
